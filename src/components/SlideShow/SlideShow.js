@@ -26,11 +26,14 @@ class SlideShow extends Component {
             durationInSeconds={slide.durationInSeconds}
             ended={this.nextSlide}
             textBackgroundColor={slide.textBackgroundColor} htmlValue={slide.htmlValue} 
-            mediaSrc={slide.mediaSrc} videoMedia={true} mediaMimeType={slide.mediaMimeType}
+            mediaSrc={slide.mediaSrc} videoMedia={slide.videoMedia} mediaMimeType={slide.mediaMimeType}
             mediaHeightWidthRatio={slide.mediaHeightWidthRatio} mediaWidthPercent={slide.mediaWidthPercent} 
-            mediaTitle={slide.mediaTitle} imageMedia={slide.imageMedia}/>
+            mediaTitle={slide.mediaTitle} imageMedia={slide.imageMedia}
+            key={slide.id}/> //eksik olursa react virtual dom ile real dom arasındaki fakı anlayabiliyor ama hook methodlarını çağırmıyor
         );
     })
+
+    
 
     render() {
         return (

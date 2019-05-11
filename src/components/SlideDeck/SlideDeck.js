@@ -8,14 +8,14 @@ class SlideDeck extends Component {
     // mediaMimeType, htmlValue, textBackgroundColor
 
     componentDidMount() {
-        this.timerID = setInterval(
+        this.timerID = setTimeout(
             () => this.props.ended(),
             this.props.durationInSeconds * 1000
         );
     }
 
     componentWillUnmount() {
-        clearInterval(this.timerID);
+        clearTimeout(this.timerID);
     }
 
     render() {

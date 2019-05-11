@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import classes from './TextDeck.module.css';
 
 class TextDeck extends Component {
 
@@ -11,7 +12,7 @@ class TextDeck extends Component {
             overflow : 'hidden'
         }
         return (
-            <div style={divStyle} dangerouslySetInnerHTML={{__html : this.props.htmlValue}}>
+            <div className={classes.divClass} style={divStyle} dangerouslySetInnerHTML={{__html : this.props.htmlValue}}>
             </div>
         );
     }
